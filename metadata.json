@@ -1,0 +1,7 @@
+{
+  "name": "DreamExProp Brochure Architect",
+  "description": "An AI-powered real estate brochure designer that generates unique layouts, color palettes, and typography for property marketing materials.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
