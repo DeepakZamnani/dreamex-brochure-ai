@@ -30,7 +30,9 @@ export enum BrochureStyle {
   MINIMALIST = 'minimalist',
   AVANT_GARDE = 'avant-garde',
   ARCHITECTURAL = 'architectural',
-  EDITORIAL = 'editorial'
+  EDITORIAL = 'editorial',
+  LUXURY_MODERN = "LUXURY_MODERN",
+  BRUTALIST = "BRUTALIST"
 }
 
 export interface LayoutSection {
