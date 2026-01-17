@@ -13,10 +13,10 @@ interface DescriptionStepProps {
 const DescriptionStep: React.FC<DescriptionStepProps> = ({ data, setData, style, setStyle }) => {
   const styles = [
     { value: BrochureStyle.ARCHITECTURAL, label: 'Architectural', desc: 'Bold, structural design' },
-    { value: BrochureStyle.LUXURY_MODERN, label: 'Luxury Modern', desc: 'Elegant and contemporary' },
+    { value: BrochureStyle.LUXURY, label: 'Luxury ', desc: 'Elegant and contemporary' },
     { value: BrochureStyle.MINIMALIST, label: 'Minimalist', desc: 'Clean and simple' },
     { value: BrochureStyle.EDITORIAL, label: 'Editorial', desc: 'Magazine-style layout' },
-    { value: BrochureStyle.BRUTALIST, label: 'Brutalist', desc: 'Raw and powerful' }
+    { value: BrochureStyle.AVANT_GARDE, label: 'Avant-Garde', desc: 'Raw and powerful' }
   ];
 
   return (
