@@ -1,186 +1,52 @@
-// // ============================================================================
-// // CORE TYPES
-// // ============================================================================
+
+// export interface AgentData {
+//   name: string;
+//   title: string;
+//   phone: string;
+//   email: string;
+//   photoUrl: string;
+// }
+
+// export interface PropertySpecs {
+//   beds: string;
+//   baths: string;
+//   sqft: string;
+//   yearBuilt: string;
+// }
 
 // export interface PropertyData {
 //   title: string;
 //   location: string;
 //   price: string;
 //   description: string;
-//   specs: {
-//     beds: string;
-//     baths: string;
-//     sqft: string;
-//     yearBuilt: string;
-//   };
+//   specs: PropertySpecs;
 //   amenities: string[];
 //   images: string[];
-//   agent: {
-//     name: string;
-//     title: string;
-//     phone: string;
-//     email: string;
-//     photoUrl: string;
-//   };
+//   agent: AgentData;
 // }
 
 // export enum BrochureStyle {
-//   ARCHITECTURAL = 'architectural',
-//   LUXURY_MODERN = 'luxury-modern',
+//   LUXURY = 'luxury',
 //   MINIMALIST = 'minimalist',
-//   EDITORIAL = 'editorial',
-//   BRUTALIST = 'brutalist'
-// }
-
-// // ============================================================================
-// // EXPANDED SECTION TYPES (20+ variations)
-// // ============================================================================
-
-// export type SectionType = 
-//   // Hero Variants (8 types)
-//   | 'hero_fullscreen'
-//   | 'hero_split'
-//   | 'hero_minimal'
-//   | 'hero_magazine'
-//   | 'hero_cinematic'
-//   | 'hero_asymmetric'
-//   | 'hero_floating'
-//   | 'hero_diagonal'
-  
-//   // Narrative Variants (6 types)
-//   | 'narrative_standard'
-//   | 'narrative_timeline'
-//   | 'narrative_quote'
-//   | 'narrative_split'
-//   | 'narrative_minimal'
-//   | 'narrative_editorial'
-  
-//   // Gallery Variants (7 types)
-//   | 'gallery_masonry'
-//   | 'gallery_grid'
-//   | 'gallery_asymmetric'
-//   | 'gallery_fullbleed'
-//   | 'gallery_scattered'
-//   | 'gallery_triptych'
-//   | 'gallery_panoramic'
-  
-//   // Specs Variants (4 types)
-//   | 'specs_grid'
-//   | 'specs_cards'
-//   | 'specs_horizontal'
-//   | 'specs_minimal'
-  
-//   // Features Variants (5 types)
-//   | 'features_grid'
-//   | 'features_list'
-//   | 'features_cards'
-//   | 'features_minimal'
-//   | 'features_icons'
-  
-//   // New Section Types (8 types)
-//   | 'location_map'
-//   | 'timeline_story'
-//   | 'testimonial'
-//   | 'comparison_table'
-//   | 'video_embed'
-//   | 'stats_showcase'
-//   | 'quote_block'
-//   | 'cta_contact';
-
-// export type SectionVariant = 
-//   | 'default'
-//   | 'split'
-//   | 'overlap'
-//   | 'asymmetric'
-//   | 'glass'
-//   | 'full'
-//   | 'compact'
-//   | 'expanded';
-
-// // ============================================================================
-// // LAYOUT DNA SYSTEM
-// // ============================================================================
-
-// export type LayoutPhilosophy = 
-//   | 'brutalist_luxury'
-//   | 'soft_minimalism'
-//   | 'magazine_editorial'
-//   | 'art_deco_revival'
-//   | 'swiss_modernism'
-//   | 'asymmetric_tension'
-//   | 'balanced_harmony'
-//   | 'organic_flow'
-//   | 'geometric_precision'
-//   | 'avant_garde';
-
-// export type GridSystem = 
-//   | 'standard_12'
-//   | 'custom_16'
-//   | 'golden_ratio'
-//   | 'fibonacci'
-//   | 'fluid_adaptive';
-
-// export type FlowPattern = 
-//   | 'linear'
-//   | 'z_path'
-//   | 'spiral'
-//   | 'diagonal'
-//   | 'scattered'
-//   | 'modular';
-
-// export interface LayoutDNA {
-//   philosophy: LayoutPhilosophy;
-//   gridSystem: GridSystem;
-//   flowPattern: FlowPattern;
-//   sectionCount: number;
-//   density: 'sparse' | 'balanced' | 'dense';
-//   rhythm: 'consistent' | 'alternating' | 'crescendo' | 'staccato';
-//   visualWeight: 'top_heavy' | 'balanced' | 'bottom_anchored';
-// }
-
-// // ============================================================================
-// // PROPERTY CONTEXT ANALYSIS
-// // ============================================================================
-
-// export interface PropertyContext {
-//   pricePoint: 'ultra_luxury' | 'luxury' | 'premium' | 'standard';
-//   propertyAge: 'historic' | 'classic' | 'contemporary' | 'modern' | 'ultra_modern';
-//   spaceScale: 'compact' | 'comfortable' | 'spacious' | 'expansive' | 'estate';
-//   locationVibe: 'urban' | 'suburban' | 'coastal' | 'mountain' | 'rural';
-// }
-
-// // ============================================================================
-// // SECTION CONFIGURATION
-// // ============================================================================
-
-// export interface SectionConfig {
-//   backgroundColor?: string;
-//   textColor?: string;
-//   padding?: string;
-//   order: number;
-//   titleSize?: string;
-//   spacing?: string;
-//   alignment?: 'left' | 'center' | 'right';
-//   imageCount?: number;
-//   layout?: 'vertical' | 'horizontal' | 'grid';
+//   AVANT_GARDE = 'avant-garde',
+//   ARCHITECTURAL = 'architectural',
+//   EDITORIAL = 'editorial'
 // }
 
 // export interface LayoutSection {
-//   type: SectionType;
-//   variant: SectionVariant;
-//   config: SectionConfig;
+//   type: 'hero' | 'narrative' | 'gallery' | 'features' | 'map_spotlight' | 'cta' | 'specs_grid';
+//   variant: 'split' | 'overlap' | 'full' | 'asymmetric' | 'glass';
+//   config: {
+//     backgroundColor: string;
+//     textColor: string;
+//     padding: string;
+//     order: number;
+//     titleSize: string;
+//     animationDelay?: string;
+//   };
 // }
 
-// // ============================================================================
-// // ENHANCED BROCHURE TEMPLATE
-// // ============================================================================
-
 // export interface BrochureTemplate {
-//   // Layout Intelligence
-//   layoutDNA: LayoutDNA;
-//   propertyContext: PropertyContext;
-  
-//   // Design System
 //   palette: {
 //     primary: string;
 //     secondary: string;
@@ -188,49 +54,23 @@
 //     background: string;
 //     text: string;
 //     gradient?: string;
-//     surface?: string;
 //   };
-  
 //   typography: {
 //     heading: string;
-//     subheading?: string;
 //     body: string;
 //     label: string;
-//     accent?: string;
 //   };
-  
-//   // Narrative Content
 //   narrativeCopy: {
 //     headline: string;
 //     story: string;
 //     vision: string;
-//     tagline?: string;
 //   };
-  
-//   // Dynamic Sections
 //   sections: LayoutSection[];
-  
-//   // Optional: Animation preferences
-//   animations?: {
-//     heroEntry?: string;
-//     scrollEffect?: string;
-//     imageHover?: string;
-//     sectionTransition?: string;
-//   };
 // }
 
-// // ============================================================================
-// // DESIGN PHILOSOPHY PROFILES
-// // ============================================================================
-
-// export interface DesignPhilosophy {
-//   name: LayoutPhilosophy;
-//   whitespace: 'minimal' | 'balanced' | 'abundant' | 'aggressive';
-//   borders: 'none' | 'hairline' | 'medium' | 'thick' | 'decorative';
-//   typography: 'condensed_bold' | 'light_serif' | 'modern_sans' | 'editorial_mixed';
-//   imagery: 'high_contrast_bw' | 'muted_pastels' | 'vibrant_saturated' | 'natural_tones';
-//   layout: 'grid_strict' | 'asymmetric_free' | 'modular_blocks' | 'organic_flow';
-// }
+// ============================================================================
+// PROPERTY DATA - Enhanced for Real Estate Industry Standards
+// ============================================================================
 
 export interface AgentData {
   name: string;
@@ -247,24 +87,230 @@ export interface PropertySpecs {
   yearBuilt: string;
 }
 
-export interface PropertyData {
-  title: string;
-  location: string;
-  price: string;
-  description: string;
-  specs: PropertySpecs;
-  amenities: string[];
-  images: string[];
-  agent: AgentData;
+// NEW: Property Type Classification
+export type PropertyType = 
+  | 'apartment' 
+  | 'villa' 
+  | 'rowhouse' 
+  | 'plot' 
+  | 'commercial';
+
+// NEW: Project Status
+export type ProjectStatus = 
+  | 'under_construction' 
+  | 'ready_to_move' 
+  | 'new_launch' 
+  | 'resale';
+
+// NEW: Configuration Options
+export type Configuration = 
+  | '1BHK' 
+  | '2BHK' 
+  | '2.5BHK' 
+  | '3BHK' 
+  | '4BHK' 
+  | '5BHK'
+  | 'Penthouse'
+  | 'Studio';
+
+// NEW: Image Labels
+export type ImageLabel = 
+  | 'elevation' 
+  | 'living_room' 
+  | 'bedroom' 
+  | 'kitchen' 
+  | 'bathroom'
+  | 'balcony'
+  | 'amenities' 
+  | 'floor_plan' 
+  | 'location_map'
+  | 'exterior'
+  | 'lobby'
+  | 'other';
+
+// NEW: Target Buyer Types
+export type TargetBuyer = 
+  | 'families' 
+  | 'investors' 
+  | 'working_professionals' 
+  | 'luxury_buyers'
+  | 'nri_buyers'
+  | 'senior_citizens';
+
+// NEW: Usage Intent
+export type UsageIntent = 
+  | 'whatsapp' 
+  | 'email' 
+  | 'print' 
+  | 'presentation'
+  | 'website';
+
+// ============================================================================
+// AREA DETAILS
+// ============================================================================
+
+export interface AreaDetails {
+  carpetArea?: string;      // Actual usable area
+  builtUpArea?: string;     // Carpet + walls
+  superBuiltUpArea?: string; // Built-up + common areas
 }
 
-export enum BrochureStyle {
-  LUXURY = 'luxury',
-  MINIMALIST = 'minimalist',
-  AVANT_GARDE = 'avant-garde',
-  ARCHITECTURAL = 'architectural',
-  EDITORIAL = 'editorial'
+// ============================================================================
+// PRICE DETAILS
+// ============================================================================
+
+export interface PriceDetails {
+  startingPrice: string;                    // "₹45 Lakhs"
+  priceRange?: {
+    min: string;
+    max: string;
+  };
+  isAllInclusive: boolean;                  // Taxes included?
+  pricePerSqft?: string;                    // Optional
 }
+
+// ============================================================================
+// LABELED IMAGES
+// ============================================================================
+
+export interface LabeledImage {
+  url: string;
+  label: ImageLabel;
+  order: number;
+  isCover: boolean;                         // First image = cover
+  caption?: string;
+}
+
+// ============================================================================
+// GROUPED AMENITIES
+// ============================================================================
+
+export interface GroupedAmenities {
+  projectAmenities: string[];               // Pool, Gym, Clubhouse, etc.
+  apartmentFeatures: string[];              // Vitrified flooring, Modular kitchen, etc.
+  securityFeatures: string[];               // CCTV, Gated community, etc.
+  sustainability: string[];                 // Rainwater harvesting, Solar, etc.
+}
+
+// ============================================================================
+// SALES INTELLIGENCE (Replaces free-text description)
+// ============================================================================
+
+export interface SalesIntelligence {
+  targetBuyer: TargetBuyer[];               // Multi-select
+  keySellingPoints: [string, string, string]; // Exactly 3 reasons
+  locationAdvantages: {
+    nearbyLandmarks: string[];              // Schools, Malls, etc.
+    metroDistance?: string;                 // "500m from Metro"
+    schools?: string[];
+    hospitals?: string[];
+    itParks?: string[];
+    shopping?: string[];
+    connectivity?: string;                  // "Close to Highway"
+  };
+  uniqueFeatures?: string;                  // Optional free text for special aspects
+}
+
+// ============================================================================
+// BRANDING & LEGAL
+// ============================================================================
+
+export interface BrandingInfo {
+  developerName: string;                    // Company/Developer name
+  reraNumber?: string;                      // RERA Registration (high trust factor)
+  siteAddress: string;                      // Project site address
+  includeDisclaimer: boolean;               // Auto-generated legal disclaimer
+  websiteUrl?: string;
+  logoUrl?: string;
+}
+
+// ============================================================================
+// ADVANCED OPTIONS (Phase 2 Features)
+// ============================================================================
+
+export interface AdvancedOptions {
+  includeFloorPlan: boolean;
+  includeAmenitiesPage: boolean;
+  includeLocationMap: boolean;
+  includePriceDisclaimer: boolean;
+  includeQRCode: boolean;                   // Virtual tour / WhatsApp link
+  qrCodeUrl?: string;
+  includePaymentPlan: boolean;
+  includeSpecifications: boolean;
+}
+
+// ============================================================================
+// MAIN PROPERTY DATA INTERFACE
+// ============================================================================
+
+export interface PropertyData {
+  // Basic Information
+  title: string;                            // Property/Project name
+  location: string;                         // City/Area
+
+  // NEW: Property Classification
+  propertyType: PropertyType;
+  projectStatus: ProjectStatus;
+  configuration: Configuration[];           // Multi-select: ['2BHK', '3BHK']
+
+  // NEW: Enhanced Area Details
+  areaDetails: AreaDetails;
+
+  // NEW: Structured Pricing
+  priceDetails: PriceDetails;
+
+  // Legacy Specs (kept for backward compatibility - can be deprecated later)
+  specs: PropertySpecs;
+
+  // NEW: Labeled & Ordered Images
+  images: LabeledImage[];
+
+  // NEW: Grouped Amenities
+  amenities: GroupedAmenities;
+
+  // NEW: Structured Sales Intelligence (replaces free-text description)
+  salesIntelligence: SalesIntelligence;
+
+  // NEW: Branding & Legal Compliance
+  branding: BrandingInfo;
+
+  // Agent Information
+  agent: AgentData;
+
+  // NEW: Usage Context
+  usageIntent: UsageIntent;
+
+  // NEW: Advanced Options
+  advancedOptions?: AdvancedOptions;
+
+  // Optional: Legacy description field (can be removed later)
+  description?: string;
+}
+
+// ============================================================================
+// BROCHURE STYLE (Enhanced with use-case descriptions)
+// ============================================================================
+
+export enum BrochureStyle {
+  LUXURY = 'luxury',              // Best for high-ticket / NRI buyers
+  MINIMALIST = 'minimalist',      // Best for WhatsApp sharing
+  AVANT_GARDE = 'avant-garde',    // Modern & bold
+  ARCHITECTURAL = 'architectural', // Technical & precise
+  EDITORIAL = 'editorial'         // Best for email & PDF sharing
+}
+
+// Helper for style descriptions
+export const BrochureStyleDescriptions: Record<BrochureStyle, string> = {
+  [BrochureStyle.LUXURY]: 'Best for high-ticket / NRI buyers',
+  [BrochureStyle.MINIMALIST]: 'Best for WhatsApp sharing',
+  [BrochureStyle.AVANT_GARDE]: 'Modern & bold design',
+  [BrochureStyle.ARCHITECTURAL]: 'Technical & precise',
+  [BrochureStyle.EDITORIAL]: 'Best for email & PDF sharing'
+};
+
+// ============================================================================
+// LAYOUT SECTIONS (Unchanged - for rendering)
+// ============================================================================
 
 export interface LayoutSection {
   type: 'hero' | 'narrative' | 'gallery' | 'features' | 'map_spotlight' | 'cta' | 'specs_grid';
@@ -278,6 +324,10 @@ export interface LayoutSection {
     animationDelay?: string;
   };
 }
+
+// ============================================================================
+// BROCHURE TEMPLATE (Output from AI - Unchanged)
+// ============================================================================
 
 export interface BrochureTemplate {
   palette: {
@@ -300,3 +350,146 @@ export interface BrochureTemplate {
   };
   sections: LayoutSection[];
 }
+
+// ============================================================================
+// UTILITY TYPES
+// ============================================================================
+
+// For form validation
+export interface FormStep {
+  id: number;
+  label: string;
+  isComplete: boolean;
+  fields: string[];
+}
+
+// For image upload handling
+export interface ImageUploadState {
+  file: File;
+  preview: string;
+  label: ImageLabel;
+  order: number;
+}
+
+// ============================================================================
+// DEFAULT VALUES / EMPTY STATES
+// ============================================================================
+
+export const EMPTY_PROPERTY_DATA: PropertyData = {
+  title: '',
+  location: '',
+  propertyType: 'apartment',
+  projectStatus: 'ready_to_move',
+  configuration: [],
+  areaDetails: {},
+  priceDetails: {
+    startingPrice: '',
+    isAllInclusive: false
+  },
+  specs: {
+    beds: '',
+    baths: '',
+    sqft: '',
+    yearBuilt: ''
+  },
+  images: [],
+  amenities: {
+    projectAmenities: [],
+    apartmentFeatures: [],
+    securityFeatures: [],
+    sustainability: []
+  },
+  salesIntelligence: {
+    targetBuyer: [],
+    keySellingPoints: ['', '', ''],
+    locationAdvantages: {
+      nearbyLandmarks: []
+    }
+  },
+  branding: {
+    developerName: '',
+    siteAddress: '',
+    includeDisclaimer: true
+  },
+  agent: {
+    name: '',
+    title: '',
+    phone: '',
+    email: '',
+    photoUrl: ''
+  },
+  usageIntent: 'email',
+  advancedOptions: {
+    includeFloorPlan: false,
+    includeAmenitiesPage: true,
+    includeLocationMap: false,
+    includePriceDisclaimer: true,
+    includeQRCode: false,
+    includePaymentPlan: false,
+    includeSpecifications: true
+  }
+};
+
+// ============================================================================
+// PREDEFINED OPTIONS FOR DROPDOWNS/MULTI-SELECT
+// ============================================================================
+
+export const PROJECT_AMENITIES_OPTIONS = [
+  'Swimming Pool',
+  'Gymnasium',
+  'Clubhouse',
+  'Children\'s Play Area',
+  'Jogging Track',
+  'Indoor Games Room',
+  'Party Hall',
+  'Landscaped Gardens',
+  'Amphitheater',
+  'Yoga/Meditation Area',
+  'Spa & Sauna',
+  'Sports Court',
+  'Convenience Store',
+  'Cafeteria',
+  'Library'
+];
+
+export const APARTMENT_FEATURES_OPTIONS = [
+  'Vitrified Flooring',
+  'Modular Kitchen',
+  'Branded Sanitaryware',
+  'Premium Doors',
+  'False Ceiling',
+  'Video Door Phone',
+  'Balcony',
+  'Covered Parking',
+  'Power Backup',
+  'High-Speed Elevators',
+  'Vastu Compliant',
+  'Anti-Skid Tiles',
+  'Premium Fittings',
+  'Smart Home Ready'
+];
+
+export const SECURITY_FEATURES_OPTIONS = [
+  'CCTV Surveillance',
+  'Intercom Facility',
+  'Gated Community',
+  'Fire Safety Systems',
+  '24/7 Security',
+  'Access Control',
+  'Visitor Management',
+  'Emergency Exits',
+  'Fire Extinguishers',
+  'Smoke Detectors'
+];
+
+export const SUSTAINABILITY_OPTIONS = [
+  'Rainwater Harvesting',
+  'Solar Power',
+  'Sewage Treatment Plant',
+  'Waste Management',
+  'Energy-Efficient Lighting',
+  'Water Recycling',
+  'Organic Waste Converter',
+  'Green Building Certified',
+  'Eco-Friendly Materials'
+];
